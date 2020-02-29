@@ -1,0 +1,236 @@
+/* -------------------- GLOBAL ------------------------ */
+
+body
+{
+    margin: 0px; /* sa nu mai fie spatiu ala la stanga nav-ului */
+    padding: 0px;
+    padding-top: 60px;
+    background-color: lightgrey;
+    word-wrap: break-word;
+}
+
+body::-webkit-scrollbar /*pentru safari si chrome sa imi ascunda scrollbar-ul */
+{ 
+    display: none; 
+}
+
+button
+{
+    outline: none; /*sa nu mai fie incadrat intr-un patrat albastru dupa click*/
+}
+
+@media screen and (max-width: 600px) /* pentru ecrane mai mici de 600px, se va schimba background-ul */
+{
+    body 
+    {
+      background-color: olivedrab;
+    }
+}
+
+/* -------------------- BARA NAV ------------------------ */
+.baraNavigatie
+{
+    background-color: #333;
+    position: fixed; /* sa stea lipit de partea de sus */
+    top: 0px;
+    width: 100%; /* sa ocupe toata pagina ca lungime */
+}
+
+.buton_drop /* div-ul ce contine butonul si optiunile de drop-down, daca exista, daca nu se comporta normal la buton*/
+{
+    position: relative; 
+    display: block;
+    float: left; /* sa fie unul dupa altul */
+    
+}
+
+.buton /*butonul propriu-zis*/
+{
+    background-color: #333;
+    color: #F2F3F4;
+    border: none; /* sa scoata marginile de la buton ca sa fie lipite */
+    cursor: pointer;
+    padding: 18px;  /* cat e de mare butonul */
+    font-size: 16px;
+    font-family: Georgia, serif;
+}
+
+.continutDrop /* linkurile ce vor aparea la hover */
+{
+    display: none; /* sa il faci sa dispara */
+    position: absolute; /* le arangeaza unul sub altul fata de "parinte"*/
+    background-color: #333;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.buton_drop:hover .continutDrop /*linkurile ce apar la drop-down*/
+{
+    display: block;
+}
+
+.buton_drop:hover .buton /*cand dai peste butoanele din nav, sa iti coloreze butonul selectat */
+{
+    background-color: black;
+}
+
+.continutDrop a /* pentru ce apare in drop(celelalte linkuri) */
+{
+    color: #F2F3F4;
+    text-decoration: none; /*sa scoata liniile alea de la link de sub el */
+    display: block;
+    padding: 12px 12px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+.continutDrop a:hover /* sa schimbe culoarea pentru fiecare selectie cand treci peste cu mouse-ul */
+{
+    background-color: black;
+}
+
+
+/* -------------------- BODY ------------------------ */
+
+#titluBody
+{
+    margin-top: 1.1%;
+    text-align: center;
+    color: #333;
+    font-family: Georgia, serif;
+    font-size: 1.1vw;
+    animation-name: ptTitluBody;
+    animation-duration: 1.2s;
+    animation-direction: reverse;
+}
+
+@keyframes ptTitluBody
+{
+    from {font-size: 1.1vw;}
+    to {font-size: 2.5vw;}
+}
+
+/* -------------------- ALEGERI DESEN ------------------------ */
+.desen
+{
+    background: #093145;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    border-radius: 9px;
+    padding-right: 28px;
+    padding-left: 28px;
+    margin-left: 2%; /* spatierea dintre ele*/
+    margin-right: 2%;
+    margin-bottom: 1vw;
+    max-width: 17%; /*am folosit max-width care e la fel ca width in cazul acesta, doar ca sa mearga mai ok cand fac suprascriere */
+    display: inline-block;
+    vertical-align: top; /* sa le aduca pe toate pe varful sectiunii */
+}
+
+@media screen and (max-width: 600px)
+{
+    .desen
+    {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.titluDesen
+{
+    padding: 25px;
+    padding-top: 5px;
+    font-size: 1.5vw;
+    text-align: center;
+    color:#F2F3F4;
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px)
+{
+    
+    .titluDesen
+    {
+        font-size: 4vw;
+        padding-bottom: 5px;
+    }
+}
+
+.pozaDesenTabel
+{
+   width: 100%; /* redimensionare - responsive*/
+   height: auto;
+   max-width: 300px;
+   display: block; /* sa poata fi centrata cum trebuie si sa i se poata modifica inaltimea si latimea*/
+   margin-left: auto; /*centrare*/
+   margin-right: auto;
+   margin-bottom: 10%;
+   /*transform: rotate(20deg) skewY(20deg);*/ 
+}
+.stilizareScrisTabel
+{
+    text-align: justify;
+    text-justify: inter-word; /*aliniere stanga-dreapta */
+    color: #F2F3F4;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1vw;
+    margin-left: -40px; /*sa il mut mai la dreapta */
+}
+
+@media screen and (max-width: 600px)
+{
+    .stilizareScrisTabel
+    {
+        font-size: 3vw;
+    }
+}
+
+.scrisBoldSpan
+{
+    font-weight: bold;
+}
+
+.infoDesen
+{
+    padding-bottom: 10px;
+    width: 33%;
+    height: 100%;
+}
+
+
+.pozitieButon /* flexbox */
+{
+    display: flex; 
+    justify-content: center;
+}
+
+.butonTabel /*seamana cu butonul de la nav*/
+{
+    background-color: #EFD469;
+    color: #373D3F;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 14px;
+    transition: padding 0.4s;
+    margin-bottom: 13px;
+    font-size: 1.25vw;
+    border-radius: 2px;
+    border: 0px solid rgb(133, 27, 27);
+    font-family: Georgia, serif;
+}
+
+@media screen and (max-width: 600px)
+{
+    .butonTabel
+    {
+        font-size: 4vw;
+    }
+}
+
+.butonTabel:hover
+{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: #F2F3F4;
+    padding: 20px;
+}

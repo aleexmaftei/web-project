@@ -1,0 +1,184 @@
+/* -------------------- GLOBAL -------------------- */
+h2
+{
+    color:#333;
+    border-bottom: 1px solid rgba(9, 49, 69, 0.2);
+}
+
+p
+{
+    padding-left: 12px;
+    font-size: 15.8px;
+    font-family: Georgia, serif;
+}
+
+body
+{
+    font-size: 20px;
+}
+
+aside /* "afis" */
+{
+    float: right;
+    display: block; /* el oricum e block din definitie */
+    margin-left: 50px;
+}
+
+@media screen and (max-width: 600px)
+{
+    aside
+    {
+        display: none;
+    }
+}
+
+/*-------------------- DETALII -------------------- */
+.detaliiDesen
+{
+    margin: auto; /* centrarea sectiunii */
+    width: 96%;
+}
+
+/*-------------------- TABEL -------------------- */
+.tabelPersonaje
+{
+    width: 96%;
+    border-collapse: collapse;
+}
+
+th, td
+{
+    text-align: center;
+    font-size: 0.8em; /* scaleaza cu font-ul de baza 1em = 16px din fontul de baza, 0.5 inseamna jumatate din fontul de baza */
+    height: 50px;
+    padding: 10px;
+    border-bottom: 1px solid #093145;
+    color: #093145;
+}
+
+@media screen and (max-width: 600px)
+{
+    th, td
+    {
+        font-size: 0.49em;
+    }
+}
+
+tr:nth-child(even) 
+{
+    background-color: #F2F3F4;
+}
+
+.pozaPersonaj
+{
+    max-width: 180px;
+    max-height: auto;
+}
+
+/*-------------------- GALERIE --------------------*/
+
+.figure
+{
+    display: none;
+}
+
+.galerie_poze
+{
+    display: none;
+}
+
+
+/*-------------------- FLEXBOX PAGINA DETALII --------------------*/
+
+.stilizareFlexBox
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+/*-------------------- PAGINA DETALII --------------------*/
+.butoaneIframe
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-top: 50px;
+} 
+
+.linkIframe
+{
+    background-color: #333; 
+    border: none;
+    color: #F2F3F4;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.iframe
+{
+    display: block; /* sa il pot centra */
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+	height: 1000px;
+}
+
+
+/*-------------------- PARTEA A DOUA DIN PROIECT -------------------- */
+
+.subtitlu
+{
+    padding-left:40px;
+}
+.formular1
+{
+    padding: 50px;
+    padding-top: 5px;
+    margin: 30px;
+    border: 2px solid rgb(133, 27, 2);
+    background-color: lightgoldenrodyellow;
+}
+
+.formular2
+{
+    padding: 50px;
+    padding-top: 5px;
+    margin: 30px;
+    border: 5px solid rgb(133, 27, 2);
+    background-color: whitesmoke;
+}
+
+.text
+{
+    font-size: 20px;
+    background-color:whitesmoke;
+}
+
+.gresit
+{
+    background-color: red;
+}
+
+.corect
+{
+    background-color: lightgreen;
+}
+
+#outside
+{
+    margin: auto;
+    width: 75%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+#footerText
+{
+    display: absolute;
+    float: left;
+    padding-left: 25px;
+    width: 100%;
+}

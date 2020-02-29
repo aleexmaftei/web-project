@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Desene</title>
+   
+		<meta charset = "UTF-8">
+		<meta name = "keywords" content = "HTML, Spongebob, CSS, Patrick, Square-Pants">
+		<meta name = "author" content = "Alex M">
+		
+        <base href = "file://D:/probleme%20info/facultate/an%202/web/proiect/" target = "_self">
+        
+        <link rel = "shortcut icon" type = "image/x-icon" href = "pics/favicon.ico">
+        <link rel = "stylesheet" type = "text/css" href = "css/style_index.css">
+        <link rel = "stylesheet" type = "text/css" href = "css/style_add.css">
+        
+        <script src = "js/partea2.js"></script>
+    </head>
+
+    <!--Bara navigatie--->
+    <nav>
+        <div class = "baraNavigatie">
+
+            <div class = "buton_drop"> 
+               <button class = "buton">Acasă</button>
+            </div>
+            
+            <div class = "buton_drop">
+                <button class = "buton">Desene</button>
+                <div class = "continutDrop">
+                    <a href = "localhost:7000" id = "naruto">Naruto</a>
+                    <a href = "spongebob.html">SpongeBob</a>
+                    <a href = "scoobydoo.html">Scooby-Doo</a>
+                    <a href = "tom.html">Tom și Jerry</a>
+                </div>
+            </div>
+
+            <div class = "buton_drop">
+                <button class = "buton">Detalii</button>
+            </div>
+
+            <div class = "buton_drop">
+                <button class = "buton">Partea a-2a</button>
+            </div>
+        </div>
+    </nav>
+
+    <!--Continut-->
+    <body>
+        <div id = "titluBody">
+            <h1>Partea a doua a proiectului</h1>
+        </div>
+
+        <h2 class = "subtitlu">Intrebari despre desene</h2>
+        <form name = "intrebari" class = "formular1">
+            
+                <div class = "wrap_intrebare">
+                    <p class = "text">Intrebarea nr.1: </p>
+                    <div class = "raspunsuri_intrebare" class = "neselectat">
+                        <input type = "radio" name = "raspuns1" id = "rasp1" value = "rasp1" checked><label for = "rasp1">Rasp1</label> <br>
+                        <input type = "radio" name = "raspuns1" id = "rasp2" value = "rasp2"><label for = "rasp2">Rasp2</label> <br>
+                        <input type = "radio" name = "raspuns1" id = "rasp3" value = "rasp3"><label for = "rasp3">Rasp3</label> <br>
+                        <input type = "radio" name = "raspuns1" id = "rasp4" value = "rasp4"><label for = "rasp4">Rasp4</label> <br>
+                    </div>
+                </div>
+            
+
+            
+                <div class = "wrap_intrebare">
+                    <p class = "text">Intrebarea nr.2: </p>
+                    <div class = "raspunsuri_intrebare">
+                        <input type = "radio" name = "raspuns2" id = "rasp5" value = "rasp5" checked><label for = "rasp5">Rasp5</label> <br>
+                        <input type = "radio" name = "raspuns2" id = "rasp6" value = "rasp6"><label for = "rasp6">Rasp6</label> <br>
+                        <input type = "radio" name = "raspuns2" id = "rasp7" value = "rasp7"><label for = "rasp7">Rasp7</label> <br>
+                        <input type = "radio" name = "raspuns2" id = "rasp8" value = "rasp8"><label for = "rasp8">Rasp8</label> <br>
+                    </div>
+                </div>
+            
+
+            
+                <div class = "wrap_intrebare">
+                    <p class = "text">Intrebarea nr.3: </p>
+                    <div class = "raspunsuri_intrebare">
+                        <input type = "radio" name = "raspuns3" id = "rasp9" value = "rasp9" checked><label for = "rasp9">Rasp9</label> <br>
+                        <input type = "radio" name = "raspuns3" id = "rasp10" value = "rasp10"><label for = "rasp10">Rasp10</label> <br>
+                        <input type = "radio" name = "raspuns3" id = "rasp11" value = "rasp11"><label for = "rasp11">Rasp11</label> <br>
+                        <input type = "radio" name = "raspuns3" id = "rasp12" value = "rasp12"><label for = "rasp12">Rasp12</label> <br>
+                    </div>
+                </div>
+            
+                <div class = "wrap_intrebare">
+                    <p class = "text">Intrebarea nr.4: </p>
+                    <div class = "raspunsuri_intrebare">
+                        <input type = "radio" name = "raspuns4" id = "rasp13" value = "rasp13" checked><label for = "rasp13">Rasp13</label> <br>
+                        <input type = "radio" name = "raspuns4" id = "rasp14" value = "rasp14"><label for = "rasp14">Rasp14</label> <br>
+                        <input type = "radio" name = "raspuns4" id = "rasp15" value = "rasp15"><label for = "rasp15">Rasp15</label> <br>
+                        <input type = "radio" name = "raspuns4" id = "rasp16" value = "rasp16"><label for = "rasp16">Rasp16</label> <br>
+                    </div>
+                </div>
+
+                <br>
+                <button type = "button" class = "buton_intrebari"> Submit intrebari </button>
+                
+            </form>
+            
+
+        <h2 class = "subtitlu">Persoane care au participat la quiz</h2>
+        <div class = "formular1">
+            <h2>Nume si prenume</h2>
+            <form id = "form_lista">
+                <input type = "text" id = "input_lista" placeholder = "Numele dumneavoastra" required>
+            </form>
+
+            <h2>Lista contacte</h2>
+            <ul id = "ul_lista"></ul>
+
+
+            <button id = "sterge_lista">Sterge toata lista</button>
+        </div>
+
+        <h2 class = "subtitlu">Altele</h2>
+        <div>
+            <div id = "ModificatDupaClick" class = "formular1">
+                <form>
+                    <p class = "text">Selecteaza culoarea textului</p>
+                    <div>
+                        <input class = "culori" type = "radio" name = "culori" value = "red" checked>Rosu <br>
+                        <input class = "culori" type = "radio" name = "culori" value = "blue">Albastru <br>
+                        <input class = "culori" type = "radio" name = "culori" value = "yellow">Galben <br>
+                    </div>
+                    <button type = "button" class = "buton_formular"> Submit culoare </button>
+                </form>
+            </div>
+            
+        </div>
+
+        <div>  
+            <h2 class = "subtitlu">Tabel pentru EventListener 3 parametrii</h2>
+            <div id = "divTabel">
+                <table id = "outside">
+                    <tr> <td id = "t1">Prima linie</td> </tr>
+                    <tr> <td id = "t2">A doua linie</td> </tr>
+                </table>
+                <p id = "coordonate"></p>
+            </div>
+            
+        </div>
+    </body>
+
+    <footer>
+        <p id = "footerText"></p>
+    </footer>
+</html>
+
